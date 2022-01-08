@@ -395,7 +395,7 @@ extern "C" {
       exponents */
 #define BF_FTOA_JS_QUIRKS    (1 << 22)
 
-    char* bf_ftoa(size_t* plen, const bf_t* a, int radix, limb_t prec,
+    LIBBF_API(char*) bf_ftoa(size_t* plen, const bf_t* a, int radix, limb_t prec,
         bf_flags_t flags);
 
     /* modulo 2^n instead of saturation. NaN and infinity return 0 */

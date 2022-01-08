@@ -7156,7 +7156,7 @@ LIBBF_API(int) bfdec_pow_ui(bfdec_t *r, const bfdec_t *a, limb_t b)
     return ret;
 }
 
-char *bfdec_ftoa(size_t *plen, const bfdec_t *a, limb_t prec, bf_flags_t flags)
+LIBBF_API(char*) bfdec_ftoa(size_t *plen, const bfdec_t *a, limb_t prec, bf_flags_t flags)
 {
     return bf_ftoa_internal(plen, (const bf_t *)a, 10, prec, flags, TRUE);
 }
